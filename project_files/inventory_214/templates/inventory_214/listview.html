@@ -1,0 +1,64 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+
+    
+    <div class="listviewbody">
+
+        <div class="jumbotron">
+            <strong><h1>Inventory 214 Devcon</h1></strong>
+            <div class="lead">
+                <form method="POST">
+                    {{form.hidden_tag()}}
+                    {{form.keyword.label}} {{form.keyword(id='keywordInput')}} <br>
+                    {{form.datafilter}}
+                    {{form.submit}}
+                </form>
+            </div>
+        </div>
+
+        
+        {% for mess in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{mess}}
+        </div>
+        {% endfor %}
+        
+
+        <div class="addbutton">
+            <a href="{{url_for('inventory214.addItem')}}" type="button", class="btn btn-primary btn-lg w-100">Add New Item</a>
+        </div>
+
+        <div id="tableView">
+
+            <table id = "intShipLogTable" class=" table table-striped table-dark">
+
+                <tr>
+                    <th></th>
+                    <th>Item Name</th>
+                    <th>Description</th>
+                    <th>Vendor</th>
+                    <th>Location</th>
+                    <th></th>
+                    <th></th>     
+                </tr>
+
+                {% for data in datalist  %}
+                <tr>
+                    <td>{{data.item_id}}</td>
+                    <td>{{data.item_name}}</td>
+                    <td>{{data.item_desc}}</td>
+                    <td>{{data.item_ven}}</td>
+                    <td>{{data.item_loc}}</td>
+                    <td><a href="{{url_for('inventory214.updateItem', id = data.item_id)}}" class="btn btn-warning btn-xs" onclick="return confirm('Are you Sure to Update?')">Update</a></td>
+                    <td><a href="{{url_for('inventory214.delete', id = data.item_id)}}" class="btn btn-danger btn-xs" onclick="return confirm('Are you Sure to Delete?')">Delete</a></td>
+                </tr>   
+                {% endfor %}
+                
+            </table>
+
+            
+
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'homepage.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4" >Internal Shipping Details.</h1>
+</div>
+
+<div class="qrDataTableDiv">
+
+<table class="table table-dark table-striped" id="qrDataTable" cellspacing="3px" id>
+
+    <tr>
+    <th>QR Code</th>
+    <td>{{datadict['qrcode']}}</td>
+    </tr>
+
+    <tr>
+    <th>Product Name</th>
+    <td>{{datadict['tapeColor']}}</td>
+    </tr>
+
+    <tr>
+    <th>Customer</th>
+    <td>{{datadict['customer']}}</td>
+    </tr>
+
+    <tr>
+    <th>Tracking#</th>
+    <td>{{datadict['trackonomy_shipping_number']}}</td>
+    </tr>
+
+    <tr>
+    <th>Shipdate</th>
+    <td>{{datadict['shipDate']}}</td>
+    </tr>
+
+    <tr>
+    <th>MacId</th>
+    <td><button id='macid' class = "btn btn-secondary btn-sm" type="button" onclick="copytext('macid')">{{datadict['macid']}}</button></td>
+    </tr>
+
+    <tr>
+    <th>Firmware</th>
+    <td>{{datadict['SWrevision']}}</td>
+    </tr>
+
+    <tr>
+    <th>PCBA</th>
+    <td>{{datadict['PCBA']}}</td>
+    </tr>
+    
+</table>
+
+
+
+<script src="{{url_for("static", filename="JS/main.js")}}"></script>
+
+{% endblock content %}

@@ -1,0 +1,118 @@
+/* This is css file for html files at base */
+
+.homepageBody{
+    border: 1rem;
+    background-color: #151515;
+    color:aliceblue ;
+}
+
+.logo{
+    box-shadow: 10px 10px #2c2c30;
+    margin-bottom: 20%;
+}
+
+.listviewbody{
+    margin: 1rem;
+    margin-bottom: 20rem;
+    background-color: #151515;
+    color:aliceblue ;
+}
+
+
+.listviewRFIDbody{
+    
+    margin: 1rem;
+    margin-bottom: 20rem;
+    
+    color:aliceblue ;
+}
+
+/* Qr Code Data Table */
+
+.qrCodeEntry{
+    text-align: center;
+    margin-top: 2rem;
+}
+.qrDataTableDiv{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#qrDataTable{
+    text-align: center;
+    border: 3px;
+    border-style: groove;
+    margin-top: 2rem; 
+}
+
+
+#tableView{
+    margin-top: 2rem;
+    border: 3px;
+    padding: 10px;
+    
+    
+}
+
+.Jumbotron{
+    margin-top: 1%;
+    text-align: center;
+    position: sticky;
+}
+
+#keywordInput{
+    border: 5px;
+    border-style: groove;
+}
+
+
+#datafilter{
+    list-style-type: None;
+}
+
+
+/* Internal Shippping Page  */
+
+.intShipDiv{
+    margin-top: 1%;
+    text-align: center;
+}
+
+#intshipFormTable{
+    
+    border-style: groove;
+    margin-top: 1%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:30px;
+    
+    border:solid black 1px;
+    border-radius:6px;
+}
+
+#intShipLogTable{
+    text-align: center;
+    border-collapse: separate;
+    border-style: groove;
+    width: 80%;
+    margin: 10px 10% 5% 10%;
+    padding: 10px;
+}
+
+.pageNum{
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+.AddItem{
+    text-align: center;
+    border-collapse: separate;
+    border-style: groove;
+    width: 80%;
+    margin: 10px 10% 5% 10%;
+    padding: 10px;
+}
